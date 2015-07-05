@@ -150,10 +150,10 @@ class ASRadialMenu: UIView,ASRadialButtonDelegate{
         }
         if self.items?.count > 0 {
             
-            self.itemsWillDisapearIntoButton(sender as UIButton)
+            self.itemsWillDisapearIntoButton(sender as! UIButton)
         } else {
             
-            self.itemsWillAppear(sender as UIButton, frame: frame, inView: view)
+            self.itemsWillAppear(sender as! UIButton, frame: frame, inView: view)
         }
     }
     
@@ -181,7 +181,7 @@ class ASRadialMenu: UIView,ASRadialButtonDelegate{
         }
         self.itemIndex--
         
-        let button = self.items[self.itemIndex] as ASRadialButton
+        let button = self.items[self.itemIndex] as! ASRadialButton
         button.willDisappear()
         
     }
@@ -193,14 +193,14 @@ class ASRadialMenu: UIView,ASRadialButtonDelegate{
             return;
         }
         
-        let button = self.items[self.itemIndex] as ASRadialButton
+        let button = self.items[self.itemIndex] as! ASRadialButton
         button.willAppear()
         self.itemIndex++
     }
     
     func buttonPressed(sender:AnyObject) {
        
-        let button = sender as ASRadialButton
+        let button = sender as! ASRadialButton
         self.delegate?.radialMenudidSelectItemAtIndex(self, index: button.tag)
         
     }

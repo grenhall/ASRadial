@@ -27,7 +27,7 @@ class ViewController: UIViewController,ASRadialMenuDelegate{
 
     @IBAction func buttonPressed(sender: AnyObject) {
         
-        self.radialMenu.buttonsWillAnimateFromButton(sender as UIButton, frame: self.button.frame, view: self.view)
+        self.radialMenu.buttonsWillAnimateFromButton(sender as! UIButton, frame: self.button.frame, view: self.view)
         
     }
     
